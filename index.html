@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Quiz</title>
+  </head>
+  <body>
+    <h1>Quiz</h1>
+    <form id="quiz">
+      <p>Who invented Javascript?</p>
+      <input type="radio" name="q1" value="a" id="q1a">Douglas Crockford<br>
+      <input type="radio" name="q1" value="b" id="q1b">Sheryl Sandberg<br>
+      <input type="radio" name="q1" value="c" id="q1c">Brendan Eich<br>
+      
+      <p>Which one of these is a JavaScript package manager?</p>
+      <input type="radio" name="q2" value="a" id="q2a">protools<br>
+      <input type="radio" name="q2" value="b" id="q2b">photoshoo<br>
+      <input type="radio" name="q2" value="c" id="q2c">npm<br>
+
+      
+      
+      <button onclick="checkQuiz()">Submit</button>
+    </form>
+    
+    <script>
+      function checkQuiz() {
+        var correct = 0;
+        
+        if (document.getElementById("q1c").checked) {
+          correct++;
+        }
+        
+        if (document.getElementById("q2c").checked) {
+          correct++;
+        }
+
+        
+        alert("You got " + correct + " out of 2 questions correct!");
+      }
+    </script>
+  </body>
+</html>
